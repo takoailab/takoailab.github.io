@@ -20,7 +20,7 @@
     }
 
 - title: "Automatic Layer Selection for Hallucination Detection"
-  authors: "Xinpeng Wang, William Cao, Andrew Gordon Wilson, Zhe Zeng"
+  authors: "Xinpeng Wang, William Xichang Cao, Andrew Gordon Wilson, Zhe Zeng"
   venue: "International Conference on Machine Learning (ICML)"
   year: 2026
   url: "https://arxiv.org/abs/2605.26366"

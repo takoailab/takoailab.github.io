@@ -3,12 +3,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import NewsList from '../components/NewsList.astro';
 import PublicationList from '../components/PublicationList.astro';
 import TalkGrid from '../components/TalkGrid.astro';
+import Sponsors from '../components/Sponsors.astro';
 import { site } from '../config';
-import { loadNews, loadTalks, loadPublications } from '../lib/data';
+import { loadData, loadNews, loadTalks, loadPublications } from '../lib/data';
 
 const news = loadNews();
 const publications = loadPublications();
 const talks = loadTalks();
+const sponsors = loadData<any[]>('sponsors');
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
@@ -75,4 +77,7 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     </div>
     <TalkGrid items={talks.slice(0, 4)} />
   </section>
+
+  <!-- Research sponsors -->
+  <Sponsors items={sponsors} />
 </BaseLayout>

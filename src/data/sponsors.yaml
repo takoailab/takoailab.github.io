@@ -1,0 +1,16 @@
+# Research sponsors shown at the bottom of the home page.
+# Drop a logo image in public/sponsors/ and set `logo` to its filename.
+#   name : sponsor name (used as the image alt text / shown if no logo)
+#   logo : image filename in public/sponsors/  (e.g. "nsf.png"); leave "" for text
+#   url  : optional link on the logo
+- name: ""
+  logo: "rc.png"
+  url: ""
+
+- name: ""
+  logo: "amazon.png"
+  url: ""
+
+- name: ""
+  logo: "nec.png"
+  url: ""

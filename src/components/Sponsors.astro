@@ -1,0 +1,40 @@
+---
+// Research-sponsor logos, each shown in its own card. A card holds a single
+// image (the logo); if a sponsor has no `logo` yet, its name shows as a
+// placeholder so you can see where to drop the image.
+const { items } = Astro.props as { items: any[] };
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const resolve = (href: string) => (href?.startsWith('/') ? base + href : href);
+---
+
+{
+  items.length > 0 && (
+    <section class="mt-16">
+      <h2 class="mb-6 text-2xl">Research Sponsors</h2>
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {items.map((s) => {
+          const card = (
+            <div class="flex h-28 items-center justify-center rounded-lg border border-ink-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md">
+              {s.logo ? (
+                <img
+                  src={`${base}/sponsors/${s.logo}`}
+                  alt={s.name}
+                  class="max-h-full max-w-full object-contain"
+                />
+              ) : (
+                <span class="text-center text-sm text-ink-400">{s.name}</span>
+              )}
+            </div>
+          );
+          return s.url ? (
+            <a href={resolve(s.url)} target="_blank" rel="noopener" class="block">
+              {card}
+            </a>
+          ) : (
+            card
+          );
+        })}
+      </div>
+    </section>
+  )
+}
