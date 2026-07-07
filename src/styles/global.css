@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Base font size — every rem-based text size scales from this.
+       Bump higher (e.g. 19px) for larger text, or back to 16px for default. */
+    font-size: 16px;
+  }
+  body {
+    @apply bg-white text-ink-800 font-sans antialiased;
+  }
+  a {
+    @apply text-accent-600 hover:text-accent-700 transition-colors;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold text-primary-700 tracking-tight;
+  }
+}
+
+@layer components {
+  /* Reusable "See more" button used on the home page. */
+  .btn-more {
+    @apply inline-block rounded-md border border-ink-200 px-4 py-2 text-sm font-medium
+           text-ink-700 hover:border-accent-500 hover:text-accent-600 transition-colors;
+  }
+  /* Simple card surface. */
+  .card {
+    @apply rounded-lg border border-ink-100 bg-white p-5 shadow-sm hover:shadow-md transition-shadow;
+  }
+}

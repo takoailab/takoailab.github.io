@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PublicationList from '../components/PublicationList.astro';
+import { loadPublications } from '../lib/data';
+
+const publications = loadPublications();
+---
+
+<BaseLayout title="Publications" active="publications">
+  <PageHeader title="Publications" intro="" />
+  <PublicationList items={publications} />
+</BaseLayout>

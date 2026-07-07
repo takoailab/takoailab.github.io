@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PeopleGrid from '../components/PeopleGrid.astro';
+import DirectorCard from '../components/DirectorCard.astro';
+import AlumniList from '../components/AlumniList.astro';
+import { loadData } from '../lib/data';
+
+const students = loadData<any[]>('students');
+const alumni = loadData<any[]>('alumni');
+const director = loadData<any[]>('director');
+---
+
+<BaseLayout title="Members" active="members">
+  <PageHeader title="Members" intro="" />
+
+  <div class="gap-36 lg:flex lg:items-start">
+    <div class="lg:shrink-0">
+      <h2 class="mb-6 text-2xl">Principal Investigator</h2>
+      <DirectorCard items={director} />
+    </div>
+
+    <!-- Recruiting blurb — edit the text below. -->
+    <div class="mt-10 lg:mt-0 lg:max-w-xl lg:flex-1">
+      <h2 class="mb-4 text-2xl">Joining the Lab</h2>
+      <aside class="rounded-xl border border-ink-100 bg-cream p-4 text-base text-ink-700">
+        <div class="space-y-3">
+          <p>
+            <strong>Prospective PhD Students:</strong> I am actively recruiting PhD students. Please apply
+            to the UVA Computer Science PhD program and mention my name in your application as a preferred
+            advisor.
+          </p>
+          <p>
+            <strong>Prospective Research Interns:</strong> If you are an undergraduate or master student
+            interested in working with the lab, email me with your CV, transcript, and motivation.
+          </p>
+          <p>
+            <strong>Postdocs and Visitors:</strong> Feel free to reach out if our interests align.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <h2 class="mb-6 mt-12 text-2xl">PhD Students</h2>
+  <PeopleGrid items={students} />
+
+  <h2 class="mb-6 mt-12 text-2xl">Alumni</h2>
+  <AlumniList items={alumni} />
+</BaseLayout>

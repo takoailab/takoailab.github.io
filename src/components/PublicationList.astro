@@ -1,0 +1,130 @@
+---
+// Renders a list of publications. Pass `limit` to show only the first N.
+// Per-publication resource links (all optional): pdf, poster, slides, video,
+// code. Plus a BibTeX button that reveals a copyable citation.
+const { items, limit } = Astro.props as { items: any[]; limit?: number };
+const shown = limit ? items.slice(0, limit) : items;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+// Resolve an internal ('/...') path against the site base; leave full URLs as-is.
+const resolve = (href: string) => (href?.startsWith('/') ? base + href : href);
+
+const LINK_TYPES = [
+  { key: 'pdf', label: 'PDF' },
+  { key: 'poster', label: 'Poster' },
+  { key: 'slides', label: 'Slides' },
+  { key: 'video', label: 'Video' },
+  { key: 'code', label: 'Code' },
+];
+const btn =
+  'inline-flex items-center rounded border border-ink-200 px-2 py-0.5 text-xs font-medium text-ink-600 no-underline hover:border-accent-400 hover:text-accent-600';
+---
+
+<ul class="space-y-5">
+  {
+    shown.map((p) => (
+      <li class="border-l-2 border-accent-300 pl-4">
+        <p class="font-medium text-ink-900">{p.url ? <a href={p.url}>{p.title}</a> : p.title}</p>
+        {p.authors && <p class="text-sm text-ink-600">{p.authors}</p>}
+        <p class="text-sm text-ink-500">
+          {p.venue}
+          {p.year ? `, ${p.year}` : ''}
+        </p>
+        {p.award && (
+          <p class="mt-1">
+            <span class="inline-block rounded bg-accent-500 px-2 py-0.5 text-sm font-medium text-white">
+              {p.award}
+            </span>
+          </p>
+        )}
+
+        <div class="mt-2 flex flex-wrap items-center gap-2">
+          {LINK_TYPES.map(
+            (t) =>
+              p[t.key] && (
+                <a class={btn} href={resolve(p[t.key])} target="_blank" rel="noopener">
+                  {t.label}
+                </a>
+              ),
+          )}
+          {p.links &&
+            Object.entries(p.links).map(([label, href]) => (
+              <a class={btn} href={resolve(href as string)} target="_blank" rel="noopener">
+                {label}
+              </a>
+            ))}
+          {p.bibtex && (
+            <button type="button" class={`${btn} bibtex-toggle`} aria-expanded="false">
+              BibTeX
+            </button>
+          )}
+        </div>
+
+        {p.bibtex && (
+          <div class="bibtex-block mt-2 hidden overflow-hidden rounded-md border border-ink-100">
+            <div class="flex justify-end border-b border-ink-100 bg-ink-50 px-2 py-1">
+              <button
+                type="button"
+                class="copy-bibtex text-xs font-medium text-ink-500 hover:text-accent-600"
+              >
+                Copy
+              </button>
+            </div>
+            {/* prettier-ignore */}
+            <pre class="overflow-x-auto bg-ink-50 p-3 text-xs leading-relaxed text-ink-700">{p.bibtex.trim()}</pre>
+          </div>
+        )}
+      </li>
+    ))
+  }
+</ul>
+
+<script>
+  // Toggle a BibTeX block, and copy it to the clipboard (delegated listeners).
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+
+    const toggle = target.closest('.bibtex-toggle');
+    if (toggle) {
+      const block = toggle.closest('li')?.querySelector('.bibtex-block');
+      if (block) {
+        const nowHidden = block.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!nowHidden));
+      }
+      return;
+    }
+
+    const copyBtn = target.closest('.copy-bibtex');
+    if (copyBtn) {
+      const pre = copyBtn.closest('.bibtex-block')?.querySelector('pre');
+      if (!pre) return;
+      const text = pre.textContent || '';
+      const flash = () => {
+        const prev = copyBtn.textContent;
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => {
+          copyBtn.textContent = prev;
+        }, 1500);
+      };
+      const legacyCopy = () => {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+          flash();
+        } catch {
+          /* ignore */
+        }
+        document.body.removeChild(ta);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(flash).catch(legacyCopy);
+      } else {
+        legacyCopy();
+      }
+    }
+  });
+</script>

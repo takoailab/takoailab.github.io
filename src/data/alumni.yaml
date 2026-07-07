@@ -1,0 +1,20 @@
+# Past lab members. `now` describes where they are now (optional).
+- name: "Ruoyan Li"
+  role: "UCLA undergraduate"
+  now: "next UCLA PhD student"
+  url: ""
+
+- name: "Vinay Shukla"
+  role: "UCLA undergraduate"
+  now: "next UCLA master student"
+  url: ""
+
+- name: "Wenzhe Li"
+  role: "Undergrad at Tsinghua University"
+  now: "next PhD student at Princeton University"
+  url: ""
+
+- name: "Fanqi Yan"
+  role: "Master at CAS"
+  now: "next PhD student at UT Austin"
+  url: ""

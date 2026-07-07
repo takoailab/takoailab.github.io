@@ -1,0 +1,16 @@
+---
+// Generic card grid used by Talks, Code, Awards, Funding.
+const { items } = Astro.props as { items: any[] };
+---
+
+<div class="grid gap-4 sm:grid-cols-2">
+  {
+    items.map((it) => (
+      <div class="card">
+        <h3 class="text-base">{it.url ? <a href={it.url}>{it.title}</a> : it.title}</h3>
+        {it.meta && <p class="mt-1 text-sm text-ink-500">{it.meta}</p>}
+        {it.description && <p class="mt-2 text-sm text-ink-600">{it.description}</p>}
+      </div>
+    ))
+  }
+</div>

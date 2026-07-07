@@ -1,0 +1,33 @@
+---
+// Grid of lab members with an optional photo.
+const { items } = Astro.props as { items: any[] };
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    items.map((m) => (
+      <div class="flex gap-5">
+        {m.photo ? (
+          <img
+            src={`${base}/people/${m.photo}`}
+            alt={m.name}
+            class="h-28 w-28 shrink-0 rounded-lg border border-ink-200 object-cover"
+          />
+        ) : (
+          <div class="flex h-28 w-28 shrink-0 items-center justify-center rounded-lg border border-ink-200 bg-ink-50 text-xs text-ink-400">
+            photo
+          </div>
+        )}
+        <div>
+          <p class="text-lg font-medium text-ink-900">
+            {m.url ? <a href={m.url}>{m.name}</a> : m.name}
+          </p>
+          <p class="text-base text-ink-500">{m.role}</p>
+          {m.interests && <p class="mt-1 text-base text-ink-600">{m.interests}</p>}
+          {m.now && <p class="mt-1 text-base text-ink-500">{m.now}</p>}
+        </div>
+      </div>
+    ))
+  }
+</div>

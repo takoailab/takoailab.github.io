@@ -1,0 +1,14 @@
+---
+import { site } from '../config';
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-16 border-t border-ink-100">
+  <div class="mx-auto max-w-7xl px-4 py-8 text-sm text-ink-500">
+    <p>
+      © {year}
+      {site.name}. Built with <a href="https://astro.build">Astro</a> &amp; Tailwind CSS. Lab logo designed
+      by Anna Cao.
+    </p>
+  </div>
+</footer>

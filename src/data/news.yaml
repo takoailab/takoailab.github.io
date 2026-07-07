@@ -1,0 +1,19 @@
+# Each entry is one news item. Newest first. `text` may contain simple HTML.
+# `tag` is an optional category shown as a colored pill next to the date.
+# Known tags (with colors): paper, funding, award, talk, team, release, code.
+- date: Apr 2026
+  tag: paper
+  text: "Two papers accepted to ICML 2026: <a href='https://arxiv.org/abs/2606.01509'>ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts</a> and <a href='https://arxiv.org/abs/2605.26366'>Automatic Layer Selection for Hallucination Detection</a> 🎉"
+
+- date: Apr 2026
+  tag: paper
+  text: "One paper accepted to NeSy 2026: Learning Deep Generative Models under Hard Linear Equality Constraints 🎉"
+
+- date: Feb 2026
+  tag: funding
+  text: "We received <a href='https://archive.rc.virginia.edu/service/dac/awards/'>the DAC award</a>. Thank you UVA RC!"
+  url: ""
+
+- date: Aug 2025
+  tag: team
+  text: "Welcome Zhizhen, Heng and Xinpeng to the group 🥳"

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import NewsList from '../components/NewsList.astro';
+import PublicationList from '../components/PublicationList.astro';
+import TalkGrid from '../components/TalkGrid.astro';
+import { site } from '../config';
+import { loadNews, loadTalks, loadPublications } from '../lib/data';
+
+const news = loadNews();
+const publications = loadPublications();
+const talks = loadTalks();
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<BaseLayout active="news">
+  <!-- Intro / contact -->
+  <section class="mb-12 rounded-xl border border-ink-100 bg-cream p-6 md:flex md:gap-8">
+    <div class="mb-4 shrink-0 md:mb-0">
+      <!-- Lab logo lives at public/logo.png -->
+      <img
+        src={base + '/logo.png'}
+        alt={site.name}
+        class="h-40 w-40 rounded-lg border border-ink-200 bg-white object-contain p-2"
+      />
+    </div>
+    <div>
+      <h1 class="text-3xl">{site.fullName}</h1>
+      <p class="mt-1 text-ink-500">
+        Directed by <a href={site.director.url}>{site.director.name}</a>
+      </p>
+      <p class="mt-3 text-ink-700">{site.tagline}</p>
+
+      <div class="mt-4 space-y-1 text-sm text-ink-600">
+        <p>{site.affiliation}</p>
+        <p>{site.address.join(' · ')}</p>
+        <p>
+          Email: <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+        <p class="flex flex-wrap gap-3 pt-1">
+          {site.links.github && <a href={site.links.github}>GitHub</a>}
+          {site.links.twitter && <a href={site.links.twitter}>Twitter</a>}
+          {
+            site.links.mastodon && (
+              <a rel="me" href={site.links.mastodon}>
+                Mastodon
+              </a>
+            )
+          }
+          {site.links.youtube && <a href={site.links.youtube}>YouTube</a>}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="mb-12">
+    <h2 class="mb-4 text-2xl">News</h2>
+    <NewsList items={news} limit={6} />
+  </section>
+
+  <!-- Recent publications -->
+  <section class="mb-12">
+    <div class="mb-4 flex items-baseline justify-between">
+      <h2 class="text-2xl">Recent Publications</h2>
+      <a href={base + '/publications/'} class="text-sm">All publications →</a>
+    </div>
+    <PublicationList items={publications} limit={4} />
+  </section>
+
+  <!-- Recent talks -->
+  <section>
+    <div class="mb-4 flex items-baseline justify-between">
+      <h2 class="text-2xl">Recent Talks</h2>
+      <a href={base + '/talks/'} class="text-sm">All talks →</a>
+    </div>
+    <TalkGrid items={talks.slice(0, 4)} />
+  </section>
+</BaseLayout>

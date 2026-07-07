@@ -1,0 +1,89 @@
+---
+// Director / PI card: photo, name, role, and profile-link icons (no interests).
+// Each icon shows only if its field is set in director.yaml.
+const { items } = Astro.props as { items: any[] };
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<div class="space-y-6">
+  {
+    items.map((m) => (
+      <div class="flex gap-5">
+        {m.photo ? (
+          <img
+            src={`${base}/people/${m.photo}`}
+            alt={m.name}
+            class="h-28 w-28 shrink-0 rounded-lg border border-ink-200 object-cover"
+          />
+        ) : (
+          <div class="flex h-28 w-28 shrink-0 items-center justify-center rounded-lg border border-ink-200 bg-ink-50 text-xs text-ink-400">
+            photo
+          </div>
+        )}
+        <div>
+          <p class="text-lg font-medium text-ink-900">
+            {m.url ? <a href={m.url}>{m.name}</a> : m.name}
+          </p>
+          <p class="text-base text-ink-500">{m.role}</p>
+
+          <div class="mt-2 flex items-center gap-3 text-ink-500">
+            {m.scholar && (
+              <a
+                href={m.scholar}
+                aria-label="Google Scholar"
+                title="Google Scholar"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-accent-600"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                  <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                </svg>
+              </a>
+            )}
+            {m.twitter && (
+              <a
+                href={m.twitter}
+                aria-label="Twitter"
+                title="Twitter"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-accent-600"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                  <path d="M23.953 4.57a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.06a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.936 4.936 0 0 0 4.604 3.417 9.867 9.867 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0 0 24 4.59z" />
+                </svg>
+              </a>
+            )}
+            {m.orcid && (
+              <a
+                href={m.orcid}
+                aria-label="ORCID"
+                title="ORCID"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-accent-600"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                  <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947-.525 0-.946-.422-.946-.947 0-.516.421-.947.946-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z" />
+                </svg>
+              </a>
+            )}
+            {m.email && (
+              <a
+                href={`mailto:${m.email}`}
+                aria-label="Email"
+                title="Email"
+                class="hover:text-accent-600"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                  <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z" />
+                </svg>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

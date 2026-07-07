@@ -1,0 +1,18 @@
+# Current lab members. `photo` is a filename in public/people/ (optional).
+- name: "Zhizhen Chen"
+  role: "PhD Student"
+  photo: "zhizhen.jpeg"
+  url: "https://zhizhen-chen.com/"
+  interests: ""
+
+- name: "Heng (Hugo) Zhao"
+  role: "PhD Student"
+  photo: "heng.jpg"
+  url: "https://henghugozhao.github.io/"
+  interests: ""
+
+- name: "Xinpeng Wang"
+  role: "PhD Student"
+  photo: "xinpeng.jpg"
+  url: "https://www.cs.virginia.edu/~hqr4gx"
+  interests: ""

@@ -1,0 +1,21 @@
+---
+// Text-only two-column list of past members (no photos).
+const { items } = Astro.props as { items: any[] };
+---
+
+<ul class="grid gap-x-8 gap-y-5 sm:grid-cols-2">
+  {
+    items.map((a) => (
+      <li>
+        <p class="text-lg font-medium text-ink-900">
+          {a.url ? <a href={a.url}>{a.name}</a> : a.name}
+        </p>
+        <p class="text-base text-ink-500">
+          {a.role}
+          {a.role && a.now ? ' · ' : ''}
+          {a.now}
+        </p>
+      </li>
+    ))
+  }
+</ul>

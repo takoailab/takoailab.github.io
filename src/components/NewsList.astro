@@ -1,0 +1,42 @@
+---
+const { items, limit } = Astro.props as { items: any[]; limit?: number };
+const shown = limit ? items.slice(0, limit) : items;
+
+// Category → pill colors. Unknown tags fall back to a neutral gray.
+const TAG_STYLES: Record<string, string> = {
+  paper: 'bg-accent-100 text-accent-700',
+  funding: 'bg-emerald-100 text-emerald-700',
+  award: 'bg-amber-100 text-amber-700',
+  talk: 'bg-sky-100 text-sky-700',
+  team: 'bg-violet-100 text-violet-700',
+  release: 'bg-slate-100 text-slate-700',
+  code: 'bg-slate-100 text-slate-700',
+};
+const tagClass = (tag: string) => TAG_STYLES[tag?.toLowerCase()] ?? 'bg-ink-100 text-ink-600';
+---
+
+<ul class="space-y-4">
+  {
+    shown.map((n) => (
+      <li class="flex gap-4">
+        <div class="flex w-40 shrink-0 items-center gap-2">
+          <time class="whitespace-nowrap text-sm font-medium text-ink-400">{n.date}</time>
+          {n.tag && (
+            <span class={`shrink-0 rounded px-1.5 py-0.5 text-xs font-medium ${tagClass(n.tag)}`}>
+              {n.tag}
+            </span>
+          )}
+        </div>
+        <div class="text-ink-700">
+          <span set:html={n.text} />
+          {n.url && (
+            <>
+              {' '}
+              <a href={n.url}>{n.linkText ?? 'more'}</a>
+            </>
+          )}
+        </div>
+      </li>
+    ))
+  }
+</ul>

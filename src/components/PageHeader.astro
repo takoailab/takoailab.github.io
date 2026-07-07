@@ -1,0 +1,9 @@
+---
+// Standard heading block for interior pages.
+const { title, intro } = Astro.props as { title: string; intro?: string };
+---
+
+<div class="mb-8 border-b border-ink-100 pb-4">
+  <h1 class="text-3xl">{title}</h1>
+  {intro && <p class="mt-2 max-w-prose text-ink-600">{intro}</p>}
+</div>

@@ -1,0 +1,130 @@
+# Talks — newest first. Optional fields may be left empty ('').
+#   label       : talk type shown in the top badge, e.g. 'Invited Talk', 'Keynote', 'Tutorial'
+#   date        : talk time shown in the top badge, e.g. 'Jun 2026'
+#   locationUrl : link for the venue / event
+#   slides      : '/talks/slides/your-talk.pdf' (a file in public/talks/slides/) or an external URL
+#   video       : external video URL (YouTube or Vimeo)
+#   thumbnail   : image filename in public/talks/ to OVERRIDE the auto thumbnail
+#
+# Thumbnail is automatic: if `thumbnail` is empty, the card uses the first page
+# of a local PDF `slides` file, else the `video` thumbnail (YouTube or Vimeo).
+# With neither slides nor video (and no thumbnail), the card shows no image.
+- title: "Constraining Deep Generative Models with Neurosymbolic Approach"
+  label: "Invited Talk"
+  date: "Oct 2025"
+  location: "AI/ML Seminar at UVA"
+  locationUrl: ""
+  slides: "/talks/slides/aiml25-slides.pdf"
+  video: ""
+
+- title: "Neurosymbolic Learning and Reasoning for Trustworthy AI"
+  label: "Guest Lecture"
+  date: "Sep 2025"
+  location: "CS6190 at UVA"
+  locationUrl: ""
+  slides: "/talks/slides/CS6190-25-slides.pdf"
+  video: ""
+
+- title: "Neurosymbolic Learning and Reasoning for Trustworthy AI"
+  label: "Invited Talk"
+  date: "Aug 2024"
+  location: "Seminar on Artificial Intelligence and Logics (SNAIL) at University of São Paulo"
+  locationUrl: "https://liamf.ime.usp.br/snail.html"
+  slides: ""
+  video: ""
+
+- title: "Weighted Model Integration"
+  label: "Invited Talk"
+  date: " Oct 2023"
+  location: "Probabilistic Circuits and Logic Workshop at Simons Institute, UC Berkeley"
+  locationUrl: "https://simons.berkeley.edu/workshops/probabilistic-circuits-logic"
+  slides: "/talks/slides/simons23-slides.pdf"
+  video: "https://www.youtube.com/watch?v=Gn9yACAU-TM"
+
+- title: "Collapsed Inference for Bayesian Deep Learning"
+  label: "Talk"
+  date: " Jul 2023"
+  location: "SPIGM Workshop at ICML 2023"
+  locationUrl: "https://spigmworkshop.github.io/"
+  slides: "/talks/slides/spigm23-slides.pdf"
+  video: ""
+
+- title: "Learning and Probabilistic Inference under constraints in AI/ML"
+  label: "Lightning Talk"
+  date: " Jul 2023"
+  location: "Amazon Science"
+  locationUrl: "https://www.amazon.science/"
+  slides: "/talks/slides/amazon23-slides.pdf"
+  video: ""
+
+- title: "Tractable Computation of Expected Kernels by Circuits"
+  label: "Invited Talk"
+  date: " Nov 2021"
+  location: "Microsoft Research, New England"
+  locationUrl: ""
+  slides: "/talks/slides/MSRNewEngland21.pdf"
+  video: ""
+
+- title: "Tractable Computation of Expected Kernels by Circuits"
+  label: "Invited Talk"
+  date: " Apr 2021"
+  location: "Yahoo! Research Seminar"
+  locationUrl: ""
+  slides: "/talks/slides/YahooSeminar21.pdf"
+  video: ""
+
+- title: "Tractable Computation of Expected Kernels by Circuits"
+  label: "Invited Talk"
+  date: " Apr 2021"
+  location: "Alan Turing Institute"
+  locationUrl: "https://www.turing.ac.uk"
+  slides: "/talks/slides/AlanTuring21.pdf"
+  video: ""
+
+- title: "Probabilistic Inference with Algebraic Constraints: Theoretical Limits and Practical Approximations"
+  label: "Talk"
+  date: " Dec 2020"
+  location: "NeurIPS"
+  locationUrl: ""
+  slides: "/talks/slides/neurips20-slides.pdf"
+  video: ""
+
+- title: "Relax, Compensate and then Integrate"
+  label: "Talk"
+  date: "Sep 2020"
+  location: "DeCoDeML Workshop at ECML-PKDD 2020"
+  locationUrl: ""
+  slides: "/talks/slides/ecml20-slides.pdf"
+  video: "https://www.youtube.com/watch?v=M9Hp6ymsxmI"
+
+- title: "Scaling up Hybrid Probabilistic Inference with Logical and Arithmetic Constraints via Message Passing"
+  label: "Talk"
+  date: "Jul 2020"
+  location: "ICML"
+  locationUrl: ""
+  slides: "/talks/slides/icml20-slides.pdf"
+  video: "https://www.youtube.com/watch?v=JJdEjtRX-LM&t=2s"
+
+- title: "Efficient search-based weighted model integration"
+  label: "Talk"
+  date: "Aug 2019"
+  location: "DeLBP Workshop at IJCAI 2019"
+  locationUrl: "https://delbp.github.io"
+  slides: "/talks/slides/uai19-slides.pdf"
+  video: ""
+
+- title: "Efficient search-based weighted model integration"
+  label: "Talk"
+  date: "Jun 2019"
+  location: "KR2ML Workshop at NeurIPS 2019"
+  locationUrl: ""
+  slides: ""
+  video: ""
+
+- title: "Stein variational message passing for continuous graphical models"
+  label: "Talk"
+  date: "Jul 2018"
+  location: "ICML"
+  locationUrl: ""
+  slides: "/talks/slides/icml18-slides.pdf"
+  video: ""

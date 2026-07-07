@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import TalkGrid from '../components/TalkGrid.astro';
+import { loadTalks } from '../lib/data';
+
+const talks = loadTalks();
+---
+
+<BaseLayout title="Talks" active="talks">
+  <PageHeader title="Talks" intro="Invited talks, tutorials, and guest lectures." />
+  <TalkGrid items={talks} />
+</BaseLayout>

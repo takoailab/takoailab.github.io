@@ -1,0 +1,9 @@
+- name: "Zhe Zeng"
+  role: "Assistant Professor"
+  photo: "zhe.jpg"
+  url: "https://zzeng.me"
+  # Profile links — leave empty ('') to hide that icon.
+  scholar: "https://scholar.google.com/citations?user=PyK6cB0AAAAJ&hl=en"
+  twitter: "https://x.com/zhezeng0908"
+  orcid: "https://orcid.org/0009-0007-8986-6503"
+  email: "zhez@virginia.edu"

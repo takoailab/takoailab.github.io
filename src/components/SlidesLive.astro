@@ -1,0 +1,27 @@
+---
+// Embeds a SlidesLive presentation player.
+//
+// Usage:
+//   <SlidesLive id="38917300" startTime={360} />
+//
+// `is:inline` is required so Astro emits these third-party scripts verbatim
+// (by default Astro bundles/transforms <script> tags, which breaks the SDK).
+interface Props {
+  id: string | number;
+  startTime?: string | number;
+  autoPlay?: boolean;
+}
+const { id, startTime, autoPlay = false } = Astro.props;
+const domId = `presentation-embed-${id}`;
+---
+
+<div id={domId} class="aspect-video w-full overflow-hidden rounded-lg border border-ink-100"></div>
+<script src="https://slideslive.com/embed_presentation.js" is:inline></script>
+<script is:inline define:vars={{ domId, id, startTime, autoPlay }}>
+  new SlidesLiveEmbed(domId, {
+    presentationId: String(id),
+    autoPlay,
+    verticalEnabled: false,
+    ...(startTime != null && startTime !== '' ? { startTime: String(startTime) } : {}),
+  });
+</script>

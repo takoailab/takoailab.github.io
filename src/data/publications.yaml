@@ -1,0 +1,327 @@
+# Publications. Sorted newest-first by `year` automatically. `url` links the
+# title; `bibtex` is shown behind a toggle. Optional resource links, each shown
+# as a button: `pdf`, `poster`, `slides`, `video`, `code` (a URL, or a '/…' path
+# to a file in public/). `links` is an extra label -> URL map for anything else.
+# `award` is an optional highlight note shown below the venue
+
+- title: "ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts"
+  authors: "Heng Zhao, Zilei Shao, Guy Van den Broeck, Zhe Zeng"
+  venue: "International Conference on Machine Learning (ICML)"
+  year: 2026
+  url: "https://arxiv.org/abs/2606.01509"
+  pdf: "https://arxiv.org/pdf/2606.01509"
+  code: "https://github.com/HengHugoZhao/ProbMoE"
+  bibtex: |
+    @article{zhao2026probmoe,
+      title   = {ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts},
+      author  = {Zhao, Heng and Shao, Zilei and Van den Broeck, Guy and Zeng, Zhe},
+      journal = {arXiv preprint arXiv:2606.01509},
+      year    = {2026}
+    }
+
+- title: "Automatic Layer Selection for Hallucination Detection"
+  authors: "Xinpeng Wang, William Cao, Andrew Gordon Wilson, Zhe Zeng"
+  venue: "International Conference on Machine Learning (ICML)"
+  year: 2026
+  url: "https://arxiv.org/abs/2605.26366"
+  pdf: "https://arxiv.org/pdf/2605.26366"
+  code: "https://github.com/DesoloYw/Automatic-Layer-Selection-for-Hallucination-Detection"
+  bibtex: |
+    @article{wang2026automatic,
+      title   = {Automatic Layer Selection for Hallucination Detection},
+      author  = {Wang, Xinpeng and Cao, William and Wilson, Andrew Gordon and Zeng, Zhe},
+      journal = {arXiv preprint arXiv:2605.26366},
+      year    = {2026}
+    }
+
+- title: "Learning Deep Generative Models under Hard Linear Equality Constraints"
+  authors: "Ruoyan Li, Dipti Ranjan Sahu, Guy Van den Broeck, Zhe Zeng"
+  venue: "Proceedings of Machine Learning Research (PMLR)"
+  year: 2026
+  url: "https://arxiv.org/abs/2502.05416"
+  pdf: "https://arxiv.org/pdf/2502.05416"
+  bibtex: |
+    @inproceedings{li2026learning,
+      title     = {Learning Deep Generative Models under Hard Linear Equality Constraints},
+      author    = {Li, Ruoyan and Sahu, Dipti Ranjan and Van den Broeck, Guy and Zeng, Zhe},
+      booktitle = {Proceedings of Machine Learning Research (PMLR)},
+      year      = {2026}
+    }
+
+- title: "The Clever Hans Mirage: A Comprehensive Survey on Spurious Correlations in Machine Learning"
+  authors: "Wenqian Ye, Luyang Jiang, Eric Xie, Guangtao Zheng, Yunsheng Ma, Xu Cao, Dongliang Guo, Daiqing Qi, Zeyu He, Yijun Tian, Megan Coffee, Zhe Zeng, Sheng Li, Ting-Hao Kenneth Huang, Ziran Wang, James M. Rehg, Henry Kautz, Andrew Gordon Wilson, Aidong Zhang"
+  venue: "Transactions on Machine Learning Research"
+  year: 2026
+  url: "https://arxiv.org/abs/2402.12715"
+  pdf: "https://arxiv.org/pdf/2402.12715"
+  bibtex: |
+    @article{ye2024clever,
+      title   = {The Clever Hans Mirage: A Comprehensive Survey on Spurious Correlations in Machine Learning},
+      author  = {Ye, Wenqian and Jiang, Luyang and Xie, Eric and Zheng, Guangtao and Ma, Yunsheng and Cao, Xu and Guo, Dongliang and Qi, Daiqing and He, Zeyu and Tian, Yijun and Coffee, Megan and Zeng, Zhe and Li, Sheng and Huang, Ting-Hao Kenneth and Wang, Ziran and Rehg, James M. and Kautz, Henry and Wilson, Andrew Gordon and Zhang, Aidong},
+      journal = {arXiv preprint arXiv:2402.12715},
+      year    = {2024}
+    }
+
+- title: "Probabilistically Rewired Message-Passing Neural Networks"
+  authors: "Chendi Qian, Andrei Manolache, Kareem Ahmed, Zhe Zeng, Guy Van den Broeck, Mathias Niepert, Christopher Morris"
+  venue: "International Conference on Learning Representations (ICLR)"
+  year: 2024
+  url: "https://arxiv.org/abs/2310.02156"
+  pdf: "https://arxiv.org/pdf/2310.02156"
+  code: "https://github.com/chendiqian/PR-MPNN"
+  bibtex: |
+    @inproceedings{qian2024probabilistically,
+      title     = {Probabilistically Rewired Message-Passing Neural Networks},
+      author    = {Qian, Chendi and Manolache, Andrei and Ahmed, Kareem and Zeng, Zhe and Van den Broeck, Guy and Niepert, Mathias and Morris, Christopher},
+      booktitle = {International Conference on Learning Representations (ICLR)},
+      year      = {2024}
+    }
+
+- title: "Neurosymbolic Learning and Reasoning for Trustworthy AI"
+  authors: "Zhe Zeng"
+  venue: "Ph.D. Dissertation, University of California, Los Angeles"
+  year: 2024
+  url: ""
+  bibtex: |
+    @phdthesis{zeng2024neurosymbolic,
+      title  = {Neurosymbolic Learning and Reasoning for Trustworthy AI},
+      author = {Zeng, Zhe},
+      school = {University of California, Los Angeles},
+      year   = {2024}
+    }
+
+- title: "Gradient estimation for exactly-k constraints"
+  authors: "Ruoyan Li, Dipti Ranjan Sahu, Guy Van den Broeck, Zhe Zeng"
+  venue: "NeurIPS Workshop on AI for Scientific Discovery: From Theory to Practice"
+  year: 2023
+
+- title: "Collapsed Inference for Bayesian Deep Learning"
+  authors: "Zhe Zeng, Guy Van den Broeck"
+  venue: "Advances in Neural Information Processing Systems (NeurIPS)"
+  year: 2023
+  url: "https://arxiv.org/abs/2306.09686"
+  pdf: "https://arxiv.org/pdf/2306.09686"
+  slides: "/talks/slides/neurips23-slides.pdf"
+  poster: "/talks/posters/ciber-neurips23-poster.pdf"
+  code: "https://github.com/UCLA-StarAI/CIBER"
+  bibtex: |
+    @inproceedings{zeng2023collapsed,
+      title     = {Collapsed Inference for Bayesian Deep Learning},
+      author    = {Zeng, Zhe and Van den Broeck, Guy},
+      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+      year      = {2023}
+    }
+
+- title: "Collapsed Inference for Bayesian Deep Learning"
+  authors: "Zhe Zeng, Guy Van den Broeck"
+  venue: " ICML Workshop on Structured Probabilistic Inference & Generative Modeling (SPIGM)"
+  url: "https://spigmworkshop.github.io"
+  year: 2023
+  award: "Oral Presentation (top 5%)"
+  slides: "/talks/slides/spigm23-slides.pdf"
+
+- title: "A Unified Approach to Count-Based Weakly Supervised Learning"
+  authors: "Vinay Shukla, Zhe Zeng, Kareem Ahmed, Guy Van den Broeck"
+  venue: "Advances in Neural Information Processing Systems (NeurIPS)"
+  year: 2023
+  url: "https://arxiv.org/abs/2311.13718"
+  pdf: "https://arxiv.org/pdf/2311.13718"
+  code: "https://github.com/UCLA-StarAI/CountLoss"
+  bibtex: |
+    @inproceedings{shukla2023unified,
+      title     = {A Unified Approach to Count-Based Weakly Supervised Learning},
+      author    = {Shukla, Vinay and Zeng, Zhe and Ahmed, Kareem and Van den Broeck, Guy},
+      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+      year      = {2023}
+    }
+
+- title: "A Unified Approach to Count-Based Weakly Supervised Learning"
+  authors: "Vinay Shukla, Zhe Zeng, Kareem Ahmed, Guy Van den Broeck"
+  venue: " ICML Workshop on Differentiable Almost Everything"
+  year: 2023
+
+- title: "SIMPLE: A Gradient Estimator for k-Subset Sampling"
+  authors: "Kareem Ahmed, Zhe Zeng, Mathias Niepert, Guy Van den Broeck"
+  venue: "International Conference on Learning Representations (ICLR)"
+  year: 2023
+  url: "https://arxiv.org/abs/2210.01941"
+  pdf: "https://arxiv.org/pdf/2210.01941"
+  slides: "/talks/slides/iclr23-slides.pdf"
+  poster: "/talks/posters/simple-iclr23-poster.pdf"
+  code: "https://github.com/UCLA-StarAI/SIMPLE"
+  bibtex: |
+    @inproceedings{ahmed2023simple,
+      title     = {SIMPLE: A Gradient Estimator for k-Subset Sampling},
+      author    = {Ahmed, Kareem and Zeng, Zhe and Niepert, Mathias and Van den Broeck, Guy},
+      booktitle = {International Conference on Learning Representations (ICLR)},
+      year      = {2023}
+    }
+
+- title: "SIMPLE: A Gradient Estimator for k-Subset Sampling"
+  authors: "Kareem Ahmed, Zhe Zeng, Mathias Niepert, Guy Van den Broeck"
+  venue: "ICML Workshop on Differentiable Almost Everything"
+  year: 2023
+
+- title: "SIMPLE: A Gradient Estimator for k-Subset Sampling"
+  authors: "Kareem Ahmed, Zhe Zeng, Mathias Niepert, Guy Van den Broeck"
+  venue: "Southern California Natural Language Processing (SoCal NLP) Symposium"
+  year: 2023
+
+- title: "Probabilistic Task-Adaptive Graph Rewiring"
+  authors: "Chendi Qian, Andrei Manolache, Kareem Ahmed, Zhe Zeng, Guy Van den Broeck, Mathias Niepert, Christopher Morris"
+  venue: "ICML Workshop on Differentiable Almost Everything"
+  year: 2023
+  url: ""
+  bibtex: |
+    @inproceedings{qian2023probabilistic,
+      title     = {Probabilistic Task-Adaptive Graph Rewiring},
+      author    = {Qian, Chendi and Manolache, Andrei and Ahmed, Kareem and Zeng, Zhe and Van den Broeck, Guy and Niepert, Mathias and Morris, Christopher},
+      booktitle = {ICML Workshop on Differentiable Almost Everything},
+      year      = {2023}
+    }
+
+- title: "A Unified Knowledge Distillation Framework for Deep Directed Graphical Models"
+  authors: "Yizhuo Chen, Kaizhao Liang, Zhe Zeng, Shuochao Yao, Huajie Shao"
+  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)"
+  year: 2023
+  url: "https://ieeexplore.ieee.org/document/10204612"
+  pdf: "/papers/ChenCVPR23.pdf"
+  slides: "/talks/slides/ChenCVPR23.pdf"
+  bibtex: |
+    @inproceedings{chen2023unified,
+      title     = {A Unified Knowledge Distillation Framework for Deep Directed Graphical Models},
+      author    = {Chen, Yizhuo and Liang, Kaizhao and Zeng, Zhe and Yao, Shuochao and Shao, Huajie},
+      booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+      year      = {2023}
+    }
+
+- title: "Tractable Computation of Expected Kernels"
+  authors: "Wenzhe Li, Zhe Zeng, Antonio Vergari, Guy Van den Broeck"
+  venue: "Conference on Uncertainty in Artificial Intelligence (UAI)"
+  year: 2021
+  url: "https://proceedings.mlr.press/v161/li21a.html"
+  pdf: "https://proceedings.mlr.press/v161/li21a/li21a.pdf"
+  slides: "/talks/slides/uai21-slides.pdf"
+  code: "https://zzeng.me/github.com/UCLA-StarAI/ExpectedKernels"
+  bibtex: |
+    @inproceedings{li2021tractable,
+      title     = {Tractable Computation of Expected Kernels},
+      author    = {Li, Wenzhe and Zeng, Zhe and Vergari, Antonio and Van den Broeck, Guy},
+      booktitle = {Conference on Uncertainty in Artificial Intelligence (UAI)},
+      year      = {2021}
+    }
+
+- title: "Is Parameter Learning via Weighted Model Integration Tractable?"
+  authors: "Zhe Zeng, Paolo Morettin, Fanqi Yan, Andrea Passerini, Guy Van den Broeck"
+  venue: "Workshop on Tractable Probabilistic Modeling (TPM) at UAI"
+  year: 2021
+  url: ""
+  poster: "/talks/posters/tpm21-poster.pdf"
+  bibtex: |
+    @inproceedings{zeng2021parameter,
+      title     = {Is Parameter Learning via Weighted Model Integration Tractable?},
+      author    = {Zeng, Zhe and Morettin, Paolo and Yan, Fanqi and Passerini, Andrea and Van den Broeck, Guy},
+      booktitle = {Workshop on Tractable Probabilistic Modeling (TPM) at UAI},
+      year      = {2021}
+    }
+
+- title: "Scaling up Hybrid Probabilistic Inference with Logical and Arithmetic Constraints via Message Passing"
+  authors: "Zhe Zeng, Paolo Morettin, Fanqi Yan, Antonio Vergari, Guy Van den Broeck"
+  venue: "International Conference on Machine Learning (ICML)"
+  year: 2020
+  url: "https://arxiv.org/abs/2003.00126"
+  pdf: "https://arxiv.org/pdf/2003.00126"
+  slides: "/talks/slides/icml20-slides.pdf"
+  code: "https://github.com/UCLA-StarAI/mpwmi"
+  bibtex: |
+    @inproceedings{zeng2020scaling,
+      title     = {Scaling up Hybrid Probabilistic Inference with Logical and Arithmetic Constraints via Message Passing},
+      author    = {Zeng, Zhe and Morettin, Paolo and Yan, Fanqi and Vergari, Antonio and Van den Broeck, Guy},
+      booktitle = {International Conference on Machine Learning (ICML)},
+      year      = {2020}
+    }
+
+- title: "Probabilistic Inference with Algebraic Constraints: Theoretical Limits and Practical Approximations"
+  authors: "Zhe Zeng, Paolo Morettin, Fanqi Yan, Antonio Vergari, Guy Van den Broeck"
+  venue: "Advances in Neural Information Processing Systems (NeurIPS)"
+  year: 2020
+  url: "https://proceedings.neurips.cc/paper/2020/hash/85934679f30131d812a8c7475a7d0f74-Abstract.html"
+  pdf: "https://proceedings.neurips.cc/paper_files/paper/2020/file/85934679f30131d812a8c7475a7d0f74-Paper.pdf"
+  slides: "/talks/slides/neurips20-slides.pdf"
+  award: "Oral spotlight presentation, acceptance rate 385/9454 = 4.1%"
+  code: "https://github.com/UCLA-StarAI/recoin"
+  bibtex: |
+    @inproceedings{zeng2020probabilistic,
+      title     = {Probabilistic Inference with Algebraic Constraints: Theoretical Limits and Practical Approximations},
+      author    = {Zeng, Zhe and Morettin, Paolo and Yan, Fanqi and Vergari, Antonio and Van den Broeck, Guy},
+      booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+      year      = {2020}
+    }
+
+- title: "Relax, Compensate and then Integrate"
+  authors: "Zhe Zeng, Paolo Morettin, Fanqi Yan, Antonio Vergari, Guy Van den Broeck"
+  venue: "ECML-PKDD Workshop on Deep Continuous-Discrete Machine Learning"
+  year: 2020
+  url: ""
+  code: "https://github.com/UCLA-StarAI/recoin"
+  slides: "/talks/slides/ecml20-slides.pdf"
+  bibtex: |
+    @inproceedings{zeng2020relax,
+      title     = {Relax, Compensate and then Integrate},
+      author    = {Zeng, Zhe and Morettin, Paolo and Yan, Fanqi and Vergari, Antonio and Van den Broeck, Guy},
+      booktitle = {ECML-PKDD Workshop on Deep Continuous-Discrete Machine Learning},
+      year      = {2020}
+    }
+
+- title: "Efficient Search-Based Weighted Model Integration"
+  authors: "Zhe Zeng, Guy Van den Broeck"
+  venue: "Conference on Uncertainty in Artificial Intelligence (UAI)"
+  year: 2019
+  url: "https://arxiv.org/abs/1903.05334"
+  pdf: "https://arxiv.org/pdf/1903.05334"
+  code: "https://github.com/UCLA-StarAI/pysmi"
+  bibtex: |
+    @inproceedings{zeng2019efficient,
+      title     = {Efficient Search-Based Weighted Model Integration},
+      author    = {Zeng, Zhe and Van den Broeck, Guy},
+      booktitle = {Conference on Uncertainty in Artificial Intelligence (UAI)},
+      year      = {2019}
+    }
+
+- title: "Efficient Search-Based Weighted Model Integration"
+  authors: "Zhe Zeng, Guy Van den Broeck"
+  venue: " IJCAI Workshop on Declarative Learning Based Programming (DeLBP)"
+  year: 2019
+  slides: "/talks/slides/uai19-slides.pdf"
+
+- title: "Hybrid Probabilistic Inference with Logical Constraints: Tractability and Message Passing"
+  authors: "Zhe Zeng, Fanqi Yan, Paolo Morettin, Antonio Vergari, Guy Van den Broeck"
+  venue: "Workshop on Knowledge Representation & Reasoning Meets Machine Learning (KR2ML), NeurIPS"
+  year: 2019
+  url: "https://github.com/UCLA-StarAI/recoin"
+  slides: "/talks/slides/neurips19-slides.pdf"
+  poster: "/talks/posters/kr2ml19-poster.pdf"
+  code: ""
+  bibtex: |
+    @inproceedings{zeng2019hybrid,
+      title     = {Hybrid Probabilistic Inference with Logical Constraints: Tractability and Message Passing},
+      author    = {Zeng, Zhe and Yan, Fanqi and Morettin, Paolo and Vergari, Antonio and Van den Broeck, Guy},
+      booktitle = {Workshop on Knowledge Representation \& Reasoning Meets Machine Learning (KR2ML), NeurIPS},
+      year      = {2019}
+    }
+
+- title: "Stein Variational Message Passing for Continuous Graphical Models"
+  authors: "Dilin Wang, Zhe Zeng, Qiang Liu"
+  venue: "International Conference on Machine Learning (ICML)"
+  year: 2018
+  url: "https://arxiv.org/abs/1711.07168"
+  pdf: "https://arxiv.org/pdf/1711.07168"
+  slides: "/talks/slides/icml18-slides.pdf"
+  code: "https://github.com/dilinwang820/Graphical-SVGD"
+  bibtex: |
+    @inproceedings{wang2018stein,
+      title     = {Stein Variational Message Passing for Continuous Graphical Models},
+      author    = {Wang, Dilin and Zeng, Zhe and Liu, Qiang},
+      booktitle = {International Conference on Machine Learning (ICML)},
+      year      = {2018}
+    }

@@ -1,0 +1,36 @@
+---
+import { site } from '../config';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+const { title, description, active } = Astro.props as {
+  title?: string;
+  description?: string;
+  active?: string;
+};
+const pageTitle = title ? `${title} · ${site.name}` : site.name;
+const desc = description ?? site.description;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={desc} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/png" href={base + '/icon.png?v=1'} />
+  </head>
+  <body>
+    <Nav active={active} />
+    <main class="mx-auto max-w-7xl px-4 py-8">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
