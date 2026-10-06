@@ -203,7 +203,6 @@
   year: 2023
   url: "https://ieeexplore.ieee.org/document/10204612"
   pdf: "/papers/ChenCVPR23.pdf"
-  slides: "/talks/slides/ChenCVPR23.pdf"
   bibtex: |
     @inproceedings{chen2023unified,
       title     = {A Unified Knowledge Distillation Framework for Deep Directed Graphical Models},
