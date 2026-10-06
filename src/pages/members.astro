@@ -14,28 +14,31 @@ const director = loadData<any[]>('director');
 <BaseLayout title="Members" active="members">
   <PageHeader title="Members" intro="" />
 
-  <div class="gap-36 lg:flex lg:items-start">
+  <div class="gap-16 lg:flex lg:items-start">
     <div class="lg:shrink-0">
       <h2 class="mb-6 text-2xl">Principal Investigator</h2>
       <DirectorCard items={director} />
     </div>
 
     <!-- Recruiting blurb — edit the text below. -->
-    <div class="mt-10 lg:mt-0 lg:max-w-xl lg:flex-1">
+    <div class="mt-10 lg:mt-0 lg:flex-1">
       <h2 class="mb-4 text-2xl">Joining the Lab</h2>
       <aside class="rounded-xl border border-ink-100 bg-cream p-4 text-base text-ink-700">
         <div class="space-y-3">
+        📢 <strong>We're hiring!</strong> If you're interested in working with us, please fill out <a href='https://forms.gle/6bm5gogtLT1yhQQj7'>this interest form</a>. I will read all submissions, though I may not be able to reply to each individually.
           <p>
             <strong>Prospective PhD Students:</strong> I am actively recruiting PhD students. Please apply
             to the UVA Computer Science PhD program and mention my name in your application as a preferred
             advisor.
           </p>
           <p>
-            <strong>Prospective Research Interns:</strong> If you are an undergraduate or master student
-            interested in working with the lab, email me with your CV, transcript, and motivation.
+            <strong>Postdocs:</strong> Please fill in the form and I will contact you for a quick chat.
           </p>
           <p>
-            <strong>Postdocs and Visitors:</strong> Feel free to reach out if our interests align.
+            <strong>Prospective Research Interns:</strong> Take a look at our group webpage to see which research directions interest you. If you're a UVA undergrad or master's student, feel free also to reach out to our PhD students directly to discuss potential projects.
+          </p>
+          <p>
+            <strong>Visitors:</strong> Feel free to reach out if our interests align.
           </p>
         </div>
       </aside>

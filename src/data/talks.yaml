@@ -9,6 +9,14 @@
 # Thumbnail is automatic: if `thumbnail` is empty, the card uses the first page
 # of a local PDF `slides` file, else the `video` thumbnail (YouTube or Vimeo).
 # With neither slides nor video (and no thumbnail), the card shows no image.
+- title: "Probabilistic Methods for Trustworthy AI"
+  label: "Guest Lecture"
+  date: "Sep 2026"
+  location: "CS6190 at UVA"
+  locationUrl: ""
+  slides: "/talks/slides/CS6190-26-slides.pdf"
+  video: ""
+
 - title: "Constraining Deep Generative Models with Neurosymbolic Approach"
   label: "Invited Talk"
   date: "Oct 2025"

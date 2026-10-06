@@ -32,8 +32,8 @@ function talkThumbnails() {
 // Before deploying, set `site` (and `base` if this is a GitHub *project*
 // page served from a sub-path). See README.md for details.
 export default defineConfig({
-  // Org page (repo named <owner>.github.io) → served at the root, no `base`.
-  site: 'https://takoailab.github.io',
+  // Custom domain (see public/CNAME). Served at the root, no `base`.
+  site: 'https://takolab.ai',
   build: { format: 'directory' },
   // Keep readable, line-broken HTML in the build output (default is minified).
   compressHTML: false,

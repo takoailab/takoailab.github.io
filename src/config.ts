@@ -18,6 +18,7 @@ export const site = {
   // Contact block on the home page.
   affiliation: 'Department of Computer Science',
   address: ['University of Virginia'],
+  affiliationUrl: 'https://engineering.virginia.edu/department/computer-science',
   email: 'zhez@virginia.edu',
 
   // Social / profile links. Leave a value empty ('') to hide that row.

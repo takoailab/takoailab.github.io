@@ -4,6 +4,23 @@
 # to a file in public/). `links` is an extra label -> URL map for anything else.
 # `award` is an optional highlight note shown below the venue
 
+- title: "Entropy-Guided LLM Decoding via Probabilistic Circuits"
+  authors: "Zhizhen Chen, Daniel Mingyi Israel, Guy Van den Broeck, Zhe Zeng"
+  venue: "UAI 2026 Workshop TPM"
+  year: 2026
+  url: "https://openreview.net/forum?id=orwlLyK403"
+  pdf: "https://openreview.net/pdf?id=orwlLyK403"
+  code: ""
+  bibtex: |
+    @inproceedings{
+    chen2026entropyguided,
+    title={Entropy-Guided {LLM} Decoding via Probabilistic Circuits},
+    author={Zhizhen Chen and Daniel Mingyi Israel and Guy Van den Broeck and Zhe Zeng},
+    booktitle={The Ninth Workshop on Tractable Probabilistic Models},
+    year={2026},
+    url={https://openreview.net/forum?id=orwlLyK403}
+    }
+
 - title: "ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts"
   authors: "Heng Zhao, Zilei Shao, Guy Van den Broeck, Zhe Zeng"
   venue: "International Conference on Machine Learning (ICML)"
