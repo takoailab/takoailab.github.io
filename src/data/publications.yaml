@@ -43,6 +43,8 @@
   url: "https://arxiv.org/abs/2605.26366"
   pdf: "https://arxiv.org/pdf/2605.26366"
   code: "https://github.com/DesoloYw/Automatic-Layer-Selection-for-Hallucination-Detection"
+  slides: "/talks/slides/fepoid-icml26-slides.pdf"
+  poster: "/talks/posters/FEPoID_icml26_poster.pdf"
   bibtex: |
     @article{wang2026automatic,
       title   = {Automatic Layer Selection for Hallucination Detection},
