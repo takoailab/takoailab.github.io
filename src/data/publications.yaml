@@ -28,6 +28,8 @@
   url: "https://arxiv.org/abs/2606.01509"
   pdf: "https://arxiv.org/pdf/2606.01509"
   code: "https://github.com/HengHugoZhao/ProbMoE"
+  slides: "/talks/slides/ProbMoE_icml26_slides.pdf"
+  poster: "/talks/posters/ProbMoE_icml26_poster.pdf"
   bibtex: |
     @article{zhao2026probmoe,
       title   = {ProbMoE: Differentiable Probabilistic Routing for Mixture-of-Experts},
